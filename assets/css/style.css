@@ -11,6 +11,7 @@
   --text-color: #646464;
   --text-color-light: #ffffff;
   --gray-color: #272727;
+  --footer-color: #00071b;
 }
 
 * {
@@ -78,24 +79,6 @@ img {
 .section {
   padding: 80px 0;
 }
-
-.section-title,
-.section-subtitle {
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2rem;
-  color: #333333;
-  margin-bottom: 2rem;
-}
-
-.section-subtitle {
-  color: var(--primary-color);
-  display: block;
-}
-
-/*=============== THEME ===============*/
 
 /*=============== HEADER & NAV===============*/
 .header {
@@ -644,18 +627,212 @@ img {
   line-height: 22px;
   color: var(--text-color-light);
 }
-/*=============== Event Section ===============*/
 
 /*=============== Testimmonial Section ===============*/
 
-/* Swiper class */
+.testimonial .container h1 {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  color: var(--gray-color);
+  padding: 0 3rem;
+}
+.testimonial .container .box-container {
+  display: flex;
+  gap: 5rem;
+  padding-top: 5rem;
+}
+.testimonial .container .box-container .ellipse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
 
-/*=============== CTA Section ===============*/
+.testimonial .container .box-container .ellipse .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(39, 39, 39, 0.8);
+  z-index: 99999;
+  cursor: pointer;
+}
+.testimonial .container .box-container .ellipse .circle .img-1 {
+  position: absolute;
+  top: 227px;
+  left: 40px;
+  width: 10px;
+}
+.testimonial .container .box-container .ellipse .circle .img-2 {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  width: 10px;
+}
+.testimonial .container .box-container .ellipse .left-circle {
+  margin-left: 2rem;
+}
+.testimonial .container .box-container .ellipse .right-circle {
+  position: absolute;
+  right: -112rem;
+}
+.testimonial .container .box-container .box {
+  background: var(--text-color-light);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 50rem;
+  padding: 3rem 5rem;
+}
+.testimonial .container .box-container .box .image {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.testimonial .container .box-container .box .star {
+  text-align: center;
+}
+.testimonial .container .box-container .box span {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--gray-color);
+  margin-left: 1rem;
+}
+.testimonial .container .box-container .box p {
+  padding-top: 1rem;
+}
+.testimonial .container .box-container .box-1 {
+  margin-left: -20rem;
+}
+.testimonial .container .box-container .box-3 {
+  margin-right: -30rem;
+}
+/* Animation */
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-/*=============== News Latter Section ===============*/
-
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*=============== Footer Section ===============*/
-
+.footer {
+  background: var(--footer-color);
+}
+.footer .container {
+  padding: 2rem 3rem;
+}
+.footer .container .footer-logo {
+  display: flex;
+  gap: 3rem;
+}
+.footer .container .footer-logo h1 {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 79px;
+  color: var(--text-color-light);
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+.footer .box-container .box {
+  padding: 1rem 0;
+}
+.footer .box-container .box h3 {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  padding: 1rem 0;
+}
+.footer .box-container .box p {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 1rem 0;
+  line-height: 22px;
+  color: var(--text-color-light);
+}
+.footer .box-container .box .list-item h3 {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--text-color-light);
+}
+.footer .box-container .box .list-item li a {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--text-color-light);
+}
+.footer .box-container .box form .email {
+  width: 100%;
+  border-radius: 5rem;
+  border: 1px solid var(--text-color);
+  background: none;
+  font-size: 1.5rem;
+  text-transform: none;
+  color: var(--text-color-light);
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.2rem;
+}
+.footer .footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  padding: 2rem 0;
+}
+.footer .footer-bottom ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.footer .footer-bottom ul li {
+  position: relative;
+}
+.footer .footer-bottom ul li .f {
+  position: absolute;
+  left: 10px;
+  top: 3px;
+}
+.footer .footer-bottom p {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--text-color-light);
+}
 /* For medium devices */
 @media only screen and (max-width: 991px) {
   html {
@@ -676,14 +853,21 @@ img {
     display: block;
     padding: 3rem 0;
   }
+
   .header .nav-left-part .navbar {
     display: block;
+    position: absolute;
+    width: 100%;
+    background: var(--body-color);
+    top: 99%;
+    z-index: 99999;
+    padding: 3rem 0;
   }
   .header .logo {
     padding-left: 1.2rem;
   }
   .header .nav-left-part .navbar {
-    margin-left: -250px;
+    margin-left: -700px;
     transition: all 0.5s ease;
   }
   .header .nav-left-part .active {
@@ -695,29 +879,15 @@ img {
     padding-top: 3rem;
   }
   .header .nav-right-part {
-    display: block;
-  }
-  .header .nav-right-part input {
-    display: block;
-    width: 100%;
-    margin-top: 3rem;
-    padding: 1.5rem 0 1.5rem 1.5rem;
-  }
-  .header .nav-right-part .search {
-    left: 530px;
-  }
-  .header .nav-right-part ul li {
-    padding-top: 3rem;
-  }
-  .header .nav-right-part ul li span {
     display: none;
   }
+
   .active {
     display: none;
   }
   /* banner section */
   .banner .banner-top p {
-    padding-top: 50rem;
+    padding-top: 5rem;
     font-size: 16px;
   }
   .banner .container {
@@ -766,9 +936,39 @@ img {
     padding: 30px;
   }
   /* category section */
-  .category .container .box-container .category-wrapper {
+  .category .container .box-container {
+    height: 100%;
+  }
+  .category .container .box-container .category-wrapper .box {
+    display: grid;
+    grid-column: 1/-1;
+    height: 50vh;
+  }
+  /* testimonial section */
+  .testimonial .container {
+    margin-top: 290%;
+  }
+  .testimonial .container .box-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+  .testimonial .container .box-container .box {
+    margin-left: 0;
+    width: 100%;
+  }
+  .testimonial .container .box-container .ellipse {
+    display: none;
+  }
+  /* footer section */
+  .footer .box-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  .footer {
+    text-align: center;
   }
 }
 
@@ -787,6 +987,7 @@ img {
   .banner .container .banner-second-container .content h4 {
     font-size: 25px;
   }
+
   /* tranding section */
   .tranding .box-container {
     grid-template-columns: repeat(1, 1fr);
@@ -805,5 +1006,25 @@ img {
   }
   .forever .container h3 {
     font-size: 20px;
+  }
+  /* testimonial section */
+  .testimonial .container {
+    margin-top: 465%;
+  }
+  .testimonial .container h1 {
+    font-size: 25px;
+  }
+  /* footer section */
+  .footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+  }
+  .footer .footer-logo img {
+    width: 30%;
+  }
+  .footer .footer-bottom {
+    display: flex;
+    flex-direction: column;
   }
 }
