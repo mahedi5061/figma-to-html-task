@@ -997,7 +997,19 @@ img {
   .deals .box-container {
     grid-template-columns: repeat(1, 1fr);
   }
+  /* offer section */
+  .offer .container .image {
+    width: 100%;
+    margin-left: 0;
+  }
+  .offer .container .box {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0rem;
+  }
+
   /* forever section */
+
   .forever .container img {
     width: 200px;
   }
@@ -1009,7 +1021,7 @@ img {
   }
   /* testimonial section */
   .testimonial .container {
-    margin-top: 465%;
+    margin-top: 400%;
   }
   .testimonial .container h1 {
     font-size: 25px;
